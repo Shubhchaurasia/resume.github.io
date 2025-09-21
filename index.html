@@ -143,9 +143,6 @@
 
       /* Toggle Button */
       .toggle-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
         background: #0077b6;
         color: #fff;
         border: none;
@@ -154,16 +151,27 @@
         cursor: pointer;
         font-size: 14px;
         transition: background 0.3s;
+        position: absolute;
+        top: 10px;
+        right: 10px;
       }
 
       .toggle-btn:hover {
         background: #005f87;
       }
 
+      /* Mobile: move button below profile image */
       @media (max-width: 600px) {
+        .toggle-btn {
+          position: static;
+          display: block;
+          margin: 12px auto 0 auto; /* center below image */
+        }
+
         .container {
           padding: 20px;
         }
+
         .header h1 {
           font-size: 24px;
         }
@@ -174,8 +182,8 @@
     <div class="container">
       <!-- Header -->
       <div class="header">
-        <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
         <img src="m1.jpg" alt="Profile Picture" />
+        <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
         <h1>Shubham Chaurasia</h1>
         <p>Email: schaurasia337@gmail.com | Phone: 8518044517</p>
         <p>
@@ -321,30 +329,31 @@
           <a href="https://newquizz-e5ff2.web.app/">Kid Quiz</a>
         </p>
       </div>
+    </div>
 
-      <!-- JavaScript for Dark Mode -->
-  <script>
-    const body = document.body;
-    const btn = document.querySelector(".toggle-btn");
+    <!-- JavaScript for Dark Mode -->
+    <script>
+      const body = document.body;
+      const btn = document.querySelector(".toggle-btn");
 
-    function toggleTheme() {
-      body.classList.toggle("dark-mode");
-      if (body.classList.contains("dark-mode")) {
-        btn.textContent = "☀️ Light Mode";
-        localStorage.setItem("theme", "dark");
-      } else {
-        btn.textContent = "🌙 Dark Mode";
-        localStorage.setItem("theme", "light");
+      function toggleTheme() {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          btn.textContent = "☀️ Light Mode";
+          localStorage.setItem("theme", "dark");
+        } else {
+          btn.textContent = "🌙 Dark Mode";
+          localStorage.setItem("theme", "light");
+        }
       }
-    }
 
-    // Load theme from localStorage
-    window.onload = () => {
-      if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        btn.textContent = "☀️ Light Mode";
-      }
-    };
-  </script>
-</body>
+      // Load theme from localStorage
+      window.onload = () => {
+        if (localStorage.getItem("theme") === "dark") {
+          body.classList.add("dark-mode");
+          btn.textContent = "☀️ Light Mode";
+        }
+      };
+    </script>
+  </body>
 </html>
