@@ -1,215 +1,350 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Shubham Chaurasia</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubham Chaurasia - Resume</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-      .main {
-        background-color: white;
-        border: solid 2px black;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f6f9;
+        color: #333;
+        line-height: 1.6;
+        transition: all 0.3s ease-in-out;
       }
-      .p1 {
-        padding-left: 20px;
+
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .header img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #0077b6;
+      }
+
+      .header h1 {
+        margin: 15px 0 5px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #222;
+      }
+
+      .header p {
+        margin: 5px 0;
+        font-weight: 300;
+      }
+
+      .header a {
+        color: #0077b6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .header a:hover {
+        text-decoration: underline;
+      }
+
+      h2 {
+        border-left: 5px solid #0077b6;
+        padding-left: 10px;
+        font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      ul {
+        margin: 10px 0 20px 20px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      .section p {
+        margin: 10px 0 20px;
+      }
+
+      .sub-section {
+        margin-bottom: 15px;
+      }
+
+      .sub-section b {
+        color: #0077b6;
+      }
+
+      a {
+        color: #0077b6;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #005f87;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #777;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background: #121212;
+        color: #e4e4e4;
+      }
+
+      body.dark-mode .container {
+        background: #1e1e1e;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      body.dark-mode h2 {
+        color: #f4f4f4;
+        border-left-color: #00b4d8;
+      }
+
+      body.dark-mode .header h1 {
+        color: #f4f4f4;
+      }
+
+      body.dark-mode a {
+        color: #00b4d8;
+      }
+
+      body.dark-mode a:hover {
+        color: #0096c7;
+      }
+
+      /* Toggle Button */
+      .toggle-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #0077b6;
+        color: #fff;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+      }
+
+      .toggle-btn:hover {
+        background: #005f87;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
   <body>
-    <form>
-      <div class="main">
-        <center><img src="m1.jpg" height="150" width="150" /></center>
-        <center>
-          <p>
-            <i
-              ><h1>
-                <b
-                  >Shubham Chaurasia<br />
-                  schaurasia337@gmail.com<br />
-                  8518044517</b
-                ><br />
-                <a href="https://www.linkedin.com/in/shubhamchaurasia337/"
-                  >Linkedin ID</a
-                >
-              </h1></i
-            >
-          </p>
-          <br />
-        </center>
-
-        <h1><b>Introduction</b></h1>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+        <img src="m1.jpg" alt="Profile Picture" />
+        <h1>Shubham Chaurasia</h1>
+        <p>Email: schaurasia337@gmail.com | Phone: 8518044517</p>
         <p>
-          Hello! myself <i><b>Shubham Chaurasia</b></i> and I am from Satna M.P.
-          I have done my Schooling from Bonanza Convent Hr. Sec. School Satna in
-          which my 10th percentage is 62.5 and 12th percentage is 64.6 from
-          Maths. I have done my B.Tech (CSE) degree from AKS University Satna in
-          which my overall CGPA is 7.15. I am a DevOps Engineer with two years
-          of experience in DevOps practices and cloud infrastructure management.
-          I have a strong background in software development with skills in
-          JavaScript, React, Node.js, HTML, CSS, MySQL, and REST APIs. I am
-          RHCSA certified and specialize in setting up and maintaining robust
-          cloud systems, particularly on Amazon Web Services (AWS) and Amazon
-          EKS (Elastic Kubernetes Service).
-        </p>
-
-        <h1><b>Technical Skills</b></h1>
-        <b>Programming Languages:</b><br />
-        <li>JavaScript</li>
-        <li>Python</li>
-        <br />
-        <b>Web Technologies: </b>
-        <li>HTML, CSS, XML, Java script: React and Node</li>
-        <li>Some knowledge in Cloud Firestore</li>
-        <br />
-        <b>Database:</b>
-        <li>MySQL</li>
-        <li>Firebase</li>
-        <br />
-        <b>IDES:</b>
-        <li>Visual Studio</li>
-        <br />
-        <b> Operating System:</b>
-        <li>Linux</li>
-        <li>Windows</li>
-        <br />
-        <b> Cloud Services:</b>
-        <li>Amazon Web Services (AWS)</li>
-        <li>Amazon EKS (Elastic Kubernetes Service)</li>
-        <li>Microsoft Azure</li>
-        <br />
-        <b> Infrastructure as Code (IaC):</b>
-        <li>Terraform</li>
-        <li>Pulumi</li>
-        <li>Ansible</li>
-        <br />
-        <b> VERSION CONTROL:</b>
-        <li>GitHub</li>
-        <li>GitLab</li>
-
-        <h1><b>Academic Projects</b></h1>
-        <b><li>Evaluation of Expression</li></b>
-        <p class="p1">
-          As part of B.Tech. Research Project (4th Semester, team of two), we
-          used methods like (Infix, Prefix & Postfix Conversion), to achieve a
-          correct Conversion in Expressions. In this project we convert the
-          expressions. In this project we build full front-end work and little
-          in back-end. I was responsible for the front-end that I developed
-          using (C Language).
-        </p>
-        <b><li>Maa Santoshi Traders</li></b>
-        <p class="p1">
-          As part of B.Tech. Research Project (5th Semester), This project is
-          made for selling more products and attract more customers. In this
-          project I build full front-end work and little in back-end. Front-end
-          is developed using (HTML, XML Language) and Back-end is developed
-          using (PHP, MySQL Language).
-        </p>
-        <b><li>MST (Greh Udyog)</li></b>
-        <p class="p1">
-          As part of B.Tech. Research Project (7th Semester), I build an
-          application like flipkart. In this project is made for selling more
-          products and attract more customers. In this project I build full
-          front-end work and full back-end work. Front-end is developed using
-          (Java Language) and Back-end is developed using (Cloud Firestore
-          database).
-        </p>
-
-        <h1><b>Client Projects</b></h1>
-        <b
-          ><li>
-            Migration from Monolithic to Microservices Platform for Mypathshala
-          </li></b
-        >
-        <p class="p1">
-          Led the migration of Mypathshala's monolithic application from Digital
-          Ocean to Amazon EKS (Elastic Kubernetes Service), decomposing it into
-          microservices with Docker and Kubernetes. Implemented CI/CD pipelines
-          with GitLab and set up a dedicated GitLab Runner environment on AWS
-          for streamlined deployments. Centralized log management with Fluentd
-          and Elasticsearch, executed complex database migration with minimal
-          downtime, and migrated data to AWS S3, enhancing scalability,
-          reliability, and reducing operational costs.
-        </p>
-        <b><li>Karpenter Setup for Prasar Bharti's EKS Cluster</li></b>
-        <p class="p1">
-          Configured and deployed Karpenter on Prasar Bharti's Amazon EKS
-          cluster to enhance scalability and security. The setup enabled
-          dynamic, real-time scaling of resources, ensuring optimal performance
-          during peak loads while reducing infrastructure costs. Implemented
-          secure, automated node provisioning with Karpenter, integrating it
-          with AWS security best practices to protect sensitive workloads. This
-          solution provided Prasar Bharti with a robust, scalable, and secure
-          Kubernetes environment, supporting their high-demand broadcasting
-          operations.
-        </p>
-
-        <h1><b>Internship</b></h1>
-        <p class="p1">
-          <b>ROSTRIS RED HAT ACADMEY</b> <br />
-          My internship is done through ‘ROSTRIS Infotech’ from AKS University
-          in which training modules are:
-          <li>CCNA/NETWORKING CONCEPT</li>
-          <li>RHCSA</li>
-          <li>LINUX SERVER & SECQURITY</li>
-          <li>RHCE-ANSIBLE AUTOMATION</li>
-          <li>DOCKER + CONTAINER + KUBERNETES</li>
-          <li>AWS CLOUD COMPUTING</li>
-          <li>PYTHON</li>
-        </p>
-
-        <h1><b>Training and certifications</b></h1>
-        <p>
-          <li>Preparing for CKA exam.</li>
-          <li>I have done Redhat certification “RHCSA”.</li>
-          <li>I am doing a training on Devops.</li>
-          <li>
-            I have done online training from Milestone Online Services Pvt Ltd
-            Company in which modules are JavaScript, Nodejs and React.js.
-          </li>
-          <li>Attend webinar on How to Start Career in Data Science</li>
-          <li>
-            Attend webinar on Challenges of Cyber Security, Faced by youth in
-            our Society
-          </li>
-          <li>Attend 6 days workshop on LINUX SYSTEM ADMINISTRATION</li>
-          <li>
-            Attend 2 days IT workshop Techcon: on Artificial Intelligence,
-            Machine Learning, IOT & Cyber Security held at IIT Delhi
-          </li>
-        </p>
-
-        <h1><b>Personal Details</b></h1>
-        <p>
-          • Father’s Name: Mr. Ajay Babu Chaurasia<br />
-          • Mother’s Name: Mrs. Santoshi Chaurasia<br />
-          • Date of Birth: 18 Oct 1997<br />
-          • Gender: Male<br />
-          • Marital Status: Single<br />
-          • Language Known: English, Hindi
-        </p>
-
-        <h1><b>Personal Skills</b></h1>
-        <p>
-          • Dedication towards work.<br />
-          • Quickly adaptable to any work environments.<br />
-          • Ready to acquire new skills in relevant technology and business
-          areas.<br />
-          • Strong problem-solving and analytical
-        </p>
-
-        <h1>
-          <b>LINK OF WEB AND APPLICATIONS MADE BY ME</b>
-        </h1>
-        <p>
-          •
           <a
-            href="https://drive.google.com/file/d/1tz18RRyJL0BJVCkRMPBnjIJpOUCK6TO1/view?usp=drivesdk"
-            >Snapshots of all Applications which I maded.</a
-          ><br />
-          • <a href="https://postman-clone-7f2bc.web.app/">Postman-Clone</a
-          ><br />
-          • <a href="https://newquizz-e5ff2.web.app/">Kid Quiz</a>
+            href="https://www.linkedin.com/in/shubhamchaurasia337/"
+            target="_blank"
+            >LinkedIn Profile</a
+          >
         </p>
       </div>
-    </form>
-  </body>
+
+      <!-- Introduction -->
+      <div class="section">
+        <h2>Introduction</h2>
+        <p>
+          Hello! I’m <b>Shubham Chaurasia</b> from Satna, M.P. I completed my
+          B.Tech (CSE) from AKS University Satna with a CGPA of 7.15. I’m a
+          <b>DevOps Engineer</b> with three and half years of experience in
+          cloud infrastructure, CI/CD pipelines, and automation. Skilled in
+          JavaScript, React, Node.js, HTML, CSS, MySQL, REST APIs, and certified
+          in RHCSA. Specialized in building and managing robust cloud systems
+          with AWS and Amazon EKS.
+        </p>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><b>Languages:</b> JavaScript, Python</li>
+          <li><b>Web:</b> HTML, CSS, XML, React, Node.js, Cloud Firestore</li>
+          <li><b>Database:</b> MySQL, Firebase</li>
+          <li><b>IDE:</b> Visual Studio Code</li>
+          <li><b>OS:</b> Linux, Windows</li>
+          <li><b>Cloud:</b> AWS, EKS, Microsoft Azure</li>
+          <li><b>IaC:</b> Terraform, Pulumi, Ansible</li>
+          <li><b>Version Control:</b> GitHub, GitLab</li>
+        </ul>
+      </div>
+
+      <!-- Academic Projects -->
+      <div class="section">
+        <h2>Academic Projects</h2>
+        <div class="sub-section">
+          <b>Evaluation of Expression</b>
+          <p>
+            Developed a conversion system (Infix, Prefix, Postfix) using C.
+            Responsible for front-end design.
+          </p>
+        </div>
+        <div class="sub-section">
+          <b>Maa Santoshi Traders</b>
+          <p>
+            E-commerce project using HTML, XML (front-end), PHP, MySQL
+            (back-end).
+          </p>
+        </div>
+        <div class="sub-section">
+          <b>MST (Greh Udyog)</b>
+          <p>
+            E-commerce app like Flipkart using Java (front-end) and Cloud
+            Firestore (back-end).
+          </p>
+        </div>
+      </div>
+
+      <!-- Client Projects -->
+      <div class="section">
+        <h2>Client Projects</h2>
+        <div class="sub-section">
+          <b>Migration from Monolithic to Microservices (Mypathshala)</b>
+          <p>
+            Led migration to AWS EKS with Docker/Kubernetes, GitLab CI/CD, log
+            centralization, and AWS S3 migration.
+          </p>
+        </div>
+        <div class="sub-section">
+          <b>Karpenter Setup for Prasar Bharti</b>
+          <p>
+            Configured Karpenter on EKS for auto-scaling, cost optimization, and
+            secure workloads.
+          </p>
+        </div>
+      </div>
+
+      <!-- Internship -->
+      <div class="section">
+        <h2>Internship</h2>
+        <p><b>ROSTRIS Red Hat Academy</b></p>
+        <ul>
+          <li>Networking (CCNA)</li>
+          <li>RHCSA & RHCE Ansible Automation</li>
+          <li>Linux Server & Security</li>
+          <li>Docker, Kubernetes</li>
+          <li>AWS Cloud Computing</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <!-- Training & Certifications -->
+      <div class="section">
+        <h2>Training & Certifications</h2>
+        <ul>
+          <li>Preparing for CKA exam</li>
+          <li>Certified RHCSA</li>
+          <li>Online training in JavaScript, Node.js, React.js</li>
+          <li>Workshops on Linux Admin, AI/ML, Cybersecurity, IoT</li>
+        </ul>
+      </div>
+
+      <!-- Personal Details -->
+      <div class="section">
+        <h2>Personal Details</h2>
+        <p>
+          Father: Mr. Ajay Babu Chaurasia <br />
+          Mother: Mrs. Santoshi Chaurasia <br />
+          DOB: 18 Oct 1997 <br />
+          Gender: Male <br />
+          Languages: English, Hindi
+        </p>
+      </div>
+
+      <!-- Personal Skills -->
+      <div class="section">
+        <h2>Personal Skills</h2>
+        <p>
+          • Dedication towards work <br />
+          • Quick adaptability <br />
+          • Eager to learn new skills <br />
+          • Strong problem-solving & analytical ability
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="section">
+        <h2>Projects & Applications</h2>
+        <p>
+          <a
+            href="https://drive.google.com/file/d/1tz18RRyJL0BJVCkRMPBnjIJpOUCK6TO1/view?usp=drivesdk"
+            >Snapshots of Applications</a
+          ><br />
+          <a href="https://postman-clone-7f2bc.web.app/">Postman Clone</a><br />
+          <a href="https://newquizz-e5ff2.web.app/">Kid Quiz</a>
+        </p>
+      </div>
+
+      <!-- JavaScript for Dark Mode -->
+  <script>
+    const body = document.body;
+    const btn = document.querySelector(".toggle-btn");
+
+    function toggleTheme() {
+      body.classList.toggle("dark-mode");
+      if (body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+      }
+    }
+
+    // Load theme from localStorage
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        btn.textContent = "☀️ Light Mode";
+      }
+    };
+  </script>
+</body>
 </html>
