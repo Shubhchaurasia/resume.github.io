@@ -51,7 +51,8 @@
         color: var(--text-main);
         line-height: 1.6;
         transition: var(--transition);
-        padding: 40px 20px;
+        padding: 40px 16px;
+        overflow-x: hidden;
       }
 
       h1, h2, h3 {
@@ -61,6 +62,7 @@
 
       .container {
         max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 320px 1fr;
@@ -231,8 +233,8 @@
 
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 16px;
       }
 
       .skill-category h3 {
@@ -288,7 +290,7 @@
 
       .blog-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 16px;
       }
 
@@ -327,11 +329,18 @@
 
       /* Responsive Design */
       @media (max-width: 900px) {
+        body {
+          padding: 20px 12px;
+        }
         .container {
           grid-template-columns: 1fr;
+          gap: 24px;
         }
         aside {
           position: static;
+        }
+        section {
+          padding: 24px 20px;
         }
       }
 
